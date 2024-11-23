@@ -31,3 +31,8 @@ duckdb places_italy -c ".read code/01_extract_foursquare_os_places_italy.sql"
 ```bash
 duckdb places_italy -c ".read code/02_spatial_integration_with_istat.sql"
 ```
+
+### generazione dei file in formato geopackage per ogni provincia italiana 
+```bash
+duckdb places_italy -c ".read code/03_create_geopackage_italian_provinces.sql"
+```
