@@ -22,6 +22,21 @@ git clone https://github.com/napo/foursquare_places_italy.git
 duckdb places_italy -c ".read code/00_prepare_tables_istat.sql"
 ```
 
+### assegnazione del sistema di riferimento ad ogni file gpkg
+bash script
+```bash
+cd data/provinces
+for i in `ls *.gpkg`;
+  do
+    name=`basename $i .gpkg`;
+    tmpname=`echo $name`_tmp.gpkg;
+    echo "assign WGS84 to $i";
+    ogr2ogr -a_srs EPSG:4326 -f "GPKG" $tmpname $i;
+    mv $tmpname $i;
+    echo "done!";
+done
+```
+
 ### estrazione dei dati da foursquare
 ```bash
 duckdb places_italy -c ".read code/01_extract_foursquare_os_places_italy.sql"
