@@ -12,3 +12,17 @@ In particolare quello dei confini comunali italiani non generalizzati al 2024 (p
 
 Nella directory [data](https://github.com/napo/foursquare_places_italy/tree/main/data) sono presenti i dati divisi per province italiane e rilasciati in formato geopackage arricchiti a loro volta dagli identificativi ISTAT.
 
+## passaggi 
+### estrazione codice da repository
+```bash 
+git clone https://github.com/napo/foursquare_places_italy.git
+```
+### preparazione file con i dati ISTAT
+```bash
+duckdb places_italy -c ".read code/00_prepare_tables_istat.sql"
+```
+
+### estrazione dei dati da foursquare
+```bash
+duckdb places_italy -c ".read code/01_extract_foursquare_os_places_italy.sql"
+```
