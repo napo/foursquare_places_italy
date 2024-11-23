@@ -1,5 +1,5 @@
 # foursquare places italy
-Foursquare ha rilasciato (os places)[https://opensource.foursquare.com/os-places/] - un importante dataset di punti di interesse - con licenza aperta (si è curiosamente scelto la licenza per il codice opensource Apache 2.0 per il riascio di dati).\
+Foursquare ha rilasciato ([os places](https://opensource.foursquare.com/os-places/))[os places] - un importante dataset di punti di interesse - con licenza aperta (si è curiosamente scelto la licenza per il codice opensource Apache 2.0 per il riascio di dati).\
 L'intera documentazione è disponibile a questo indirizzo 
 https://docs.foursquare.com/data-products/docs/places-os-data-schema
 
