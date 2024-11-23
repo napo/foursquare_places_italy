@@ -26,3 +26,8 @@ duckdb places_italy -c ".read code/00_prepare_tables_istat.sql"
 ```bash
 duckdb places_italy -c ".read code/01_extract_foursquare_os_places_italy.sql"
 ```
+
+### integrazione con relazione spaziale con dati ISTAT
+```bash
+duckdb places_italy -c ".read code/02_spatial_integration_with_istat.sql"
+```
